@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Checker by Ganta Mukesh</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: linear-gradient(to bottom, #87CEEB, #bce0ee); /* Gradient for a sky-like background */
+            color: #ffffff; /* White text color */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 150vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(91, 21, 21); /* Green heading color */
+            margin-bottom: 20px;
+            font-size: 35px; /* Larger font size for the heading */
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #ffffff; /* White text color */
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+            font-size: 16px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            color: #333333; /* Dark text color */
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #4CAF50; /* Green button color */
+            color: #ffffff; /* White text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .info {
+            text-align: center;
+            background-color: #fff; /* White */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft Box Shadow */
+            margin-top: 20px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .info-heading {
+            color: #333; /* Dark Gray */
+            margin-bottom: 20px;
+        }
+
+        .info-text {
+            margin: 8px 0;
+            color: #555; /* Medium Gray */
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AIR QUALITY CHECKER</h1>
+
+    <form id="form">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" placeholder="Enter Latitude">
+
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" placeholder="Enter Longitude">
+        <br>
+        <button type="submit">Check Air Quality</button>
+    </form>
+
+    <div class="info" id="result">
+        <h1 class="info-heading">AIR QUALITY</h1>
+        <p class="info-text">AQI: <span id="aqi"></span></p>
+        <p class="info-text">CO: <span id="co"></span></p>
+        <p class="info-text">NO2: <span id="no2"></span></p>
+        <p class="info-text">O3: <span id="o3"></span></p>
+        <p class="info-text">PM2.5: <span id="pm2"></span></p>
+        <p class="info-text">PM10: <span id="pm10"></span></p>
+        <p class="info-text">SO2: <span id="so2"></span></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
